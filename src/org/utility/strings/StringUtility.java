@@ -2,7 +2,9 @@ package org.utility.strings;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Set;
 import java.util.Stack;
 import java.util.Vector;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -94,5 +96,38 @@ public class StringUtility {
 			return null;
 		}
 		return (String[]) list.toArray(new String[0]);
+	}
+
+	// ------------------------------------------------------------------------------------------
+	// Set to Array
+	public static String[] setToArray(Set<String> stringSet) {
+		if (stringSet.size() == 0 || stringSet == null)
+			return null;
+		return stringSet.toArray(new String[0]);
+	}
+	
+	// ------------------------------------------------------------------------------------------
+	// Array to HashSet
+	public static HashSet<String> stringArrayToSet(String[] strArr) {
+		if (strArr == null || strArr.length == 0) {
+			return null;
+		}
+		return new HashSet<String>(Arrays.asList(strArr));
+	}
+
+	// ------------------------------------------------------------------------------------------
+	// Set to ArrayList
+	public static ArrayList<String> setToArrayList(Set<String> stringSet) {
+		if (stringSet.size() == 0 || stringSet == null)
+			return null;
+		return new ArrayList<String>(stringSet);
+	}
+
+	// ------------------------------------------------------------------------------------------
+	// ArrayList to Set
+	public static Set<String> arrayListToSet(ArrayList<String> list) {
+		if (list.size() == 0 || list == null)
+			return null;
+		return new HashSet<>(list);
 	}
 }
