@@ -105,7 +105,7 @@ public class StringUtility {
 			return null;
 		return stringSet.toArray(new String[0]);
 	}
-	
+
 	// ------------------------------------------------------------------------------------------
 	// Array to HashSet
 	public static HashSet<String> stringArrayToSet(String[] strArr) {
@@ -129,5 +129,18 @@ public class StringUtility {
 		if (list.size() == 0 || list == null)
 			return null;
 		return new HashSet<>(list);
+	}
+
+	// ------------------------------------------------------------------------------------------
+	// Trim Set
+	public static Set<String> trimSet(Set<String> stringSet) {
+		if (stringSet == null || stringSet.size() == 0) {
+			return null;
+		}
+		Set<String> set = new HashSet<String>();
+		for (String str : stringSet) {
+			set.add(str.trim());
+		}
+		return set;
 	}
 }
