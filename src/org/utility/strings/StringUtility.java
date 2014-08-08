@@ -143,4 +143,17 @@ public class StringUtility {
 		}
 		return set;
 	}
+	
+	// ------------------------------------------------------------------------------------------
+	// Trim ArrayList
+	public static ArrayList<String> trimArrayList(ArrayList<String> list) {
+		if (list.size() == 0 || list == null) {
+			return list;
+		}
+		ArrayList<String> newList = new ArrayList<>();
+		for (int i = 0; i < list.size(); i++) {
+			newList.add(list.get(i).trim());
+		}
+		return newList;
+	}
 }
