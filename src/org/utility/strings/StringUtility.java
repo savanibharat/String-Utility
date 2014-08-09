@@ -156,4 +156,10 @@ public class StringUtility {
 		}
 		return newList;
 	}
+	
+	// ------------------------------------------------------------------------------------------
+	// is String empty
+	public static boolean isEmpty(CharSequence charSeq) {
+		return (charSeq == null || charSeq.length() == 0);
+	}
 }
