@@ -162,4 +162,20 @@ public class StringUtility {
 	public static boolean isEmpty(CharSequence charSeq) {
 		return (charSeq == null || charSeq.length() == 0);
 	}
+	
+	// ------------------------------------------------------------------------------------------
+	// isAnyEmpty
+	public static boolean isAnyEmpty(CharSequence... charSeq) {
+
+		if (charSeq == null || charSeq.length == 0) {
+			return true;
+		}
+		for (CharSequence c : charSeq) {
+			if (isEmpty(c)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 }
