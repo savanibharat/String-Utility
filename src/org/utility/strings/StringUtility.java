@@ -183,4 +183,10 @@ public class StringUtility {
 	public static boolean isNoneEmpty(CharSequence... charSeq) {
 		return !isAnyEmpty(charSeq);
 	}
+	
+	// ------------------------------------------------------------------------------------------
+	//trim - removes leading and trailing spaces from String
+	public static String trim(String str) {
+		return str == null ? null : str.trim();
+	}
 }
