@@ -177,5 +177,10 @@ public class StringUtility {
 		}
 		return false;
 	}
-	
+
+	// ------------------------------------------------------------------------------------------
+	// isNoneEmpty
+	public static boolean isNoneEmpty(CharSequence... charSeq) {
+		return !isAnyEmpty(charSeq);
+	}
 }
