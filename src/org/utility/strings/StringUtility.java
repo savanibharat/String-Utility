@@ -132,7 +132,7 @@ public class StringUtility {
 	}
 
 	// ------------------------------------------------------------------------------------------
-	// Trim Set
+	// Trim Set .trim() removes spaces from front and end
 	public static Set<String> trimSet(Set<String> stringSet) {
 		if (stringSet == null || stringSet.size() == 0) {
 			return null;
