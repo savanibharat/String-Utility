@@ -189,4 +189,12 @@ public class StringUtility {
 	public static String trim(String str) {
 		return str == null ? null : str.trim();
 	}
+	
+	// ------------------------------------------------------------------------------------------
+	// trimToNull is empty after trim then return null else return string
+	public static String trimToNull(String str) {
+		String temp = trim(str);
+		return isEmpty(temp) ? null : temp;
+	}
+	
 }
