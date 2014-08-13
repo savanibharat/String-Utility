@@ -11,6 +11,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class StringUtility {
 
+	private static final String EMPTY = "";
+	
 	// ArrayList to String Array
 	public static String[] listToStringArray(ArrayList<String> list) {
 		if (list == null || list.size() == 0)
@@ -195,6 +197,12 @@ public class StringUtility {
 	public static String trimToNull(String str) {
 		String temp = trim(str);
 		return isEmpty(temp) ? null : temp;
+	}
+	
+	// ------------------------------------------------------------------------------------------
+	// trimToEmpty empty is ""
+	public static String trimToEmpty(String str) {
+		return str == null ? EMPTY : str.trim();
 	}
 	
 }
