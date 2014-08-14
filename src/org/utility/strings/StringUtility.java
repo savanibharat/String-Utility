@@ -205,4 +205,18 @@ public class StringUtility {
 		return str == null ? EMPTY : str.trim();
 	}
 	
+	// ------------------------------------------------------------------------------------------
+	// left(String str, int length) get left side of string
+	public static String left(String str, int length) {
+		if (str == null) {
+			return null;
+		}
+		if (length < 0) {
+			return EMPTY;
+		}
+		if (str.length() <= length) {
+			return str;
+		}
+		return str.substring(0, length);
+	}
 }
